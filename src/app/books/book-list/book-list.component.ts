@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-book-list',
+  templateUrl: './book-list.component.html',
+  styleUrls: ['./book-list.component.css']
+})
+export class BookListComponent implements OnInit {
+  title: string = "Books list";
+  description: string = "This section allows you to manage books available in the library.";
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
