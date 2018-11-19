@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Client} from '../client.model';
+import {ClientService} from '../client.service';
 
 @Component({
   selector: 'app-client-list',
@@ -8,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ClientListComponent implements OnInit {
   title: string = "Clients list";
   description: string = "This section allows you to manage library clients.";
+  clients: Client[] = [];
 
-  constructor() { }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    this.clients = this.clientService.getClients();
   }
 
 }

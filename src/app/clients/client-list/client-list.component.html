@@ -2,46 +2,22 @@
 <p class="lead">{{ description }}</p>
 
 <table class="table">
-  <thead class="thead-dark">
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">First name</th>
-    <th scope="col">Last name</th>
-    <th scope="col">Action</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>John</td>
-    <td>Due</td>
-    <td>
-      <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">1</th>
-    <td>John</td>
-    <td>Due</td>
-    <td>
-      <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">1</th>
-    <td>John</td>
-    <td>Due</td>
-    <td>
-      <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">1</th>
-    <td>John</td>
-    <td>Due</td>
-    <td>
-      <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
-    </td>
-  </tr>
-  </tbody>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ client.firstName }}</td>
+            <td>{{ client.lastName }}</td>
+            <td>
+                <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
+            </td>
+        </tr>
+    </tbody>
 </table>

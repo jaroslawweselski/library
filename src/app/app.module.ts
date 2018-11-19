@@ -16,6 +16,8 @@ import {ClientListComponent} from './clients/client-list/client-list.component';
 import {ClientDetailComponent} from './clients/client-detail/client-detail.component';
 import {ClientAddComponent} from './clients/client-add/client-add.component';
 import {ClientEditComponent} from './clients/client-edit/client-edit.component';
+import {ClientService} from './clients/client.service';
+import {BookService} from './books/book.service';
 
 const appRoutes = [
     {
@@ -53,7 +55,10 @@ const appRoutes = [
         BrowserModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [],
+    providers: [
+        ClientService,
+        BookService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
