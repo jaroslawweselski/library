@@ -18,6 +18,7 @@ import {ClientAddComponent} from './clients/client-add/client-add.component';
 import {ClientEditComponent} from './clients/client-edit/client-edit.component';
 import {ClientService} from './clients/client.service';
 import {BookService} from './books/book.service';
+import {DropdownDirective} from './shared/dropdown.directive';
 
 const appRoutes = [
     {
@@ -49,7 +50,8 @@ const appRoutes = [
         ClientListComponent,
         ClientDetailComponent,
         ClientAddComponent,
-        ClientEditComponent
+        ClientEditComponent,
+        DropdownDirective
     ],
     imports: [
         BrowserModule,

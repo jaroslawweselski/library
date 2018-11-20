@@ -18,7 +18,14 @@
         <td>{{ book.author }}</td>
         <td>{{ book.quantiy }}</td>
         <td>
-            <button class="btn btn-outline-success btn-sm dropdown-toggle">Manage</button>
+            <div class="btn-group">
+                <button class="btn btn-outline-success btn-sm dropdown-toggle" appDropdown>Manage</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Show details</a>
+                    <a href="#" class="dropdown-item">Edit</a>
+                    <a href="#" class="dropdown-item">Remove</a>
+                </div>
+            </div>
         </td>
     </tr>
     </tbody>
