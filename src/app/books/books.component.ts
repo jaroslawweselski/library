@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-books',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+  @Input() action: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setAction(action: string) {
+    this.action = action;
   }
 
 }
