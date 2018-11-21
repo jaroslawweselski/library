@@ -28,4 +28,8 @@ export class ClientService {
     getClients() {
         return this.clients;
     }
+
+    removeClient(index: number) {
+        this.clients.splice(index, 1);
+    }
 }

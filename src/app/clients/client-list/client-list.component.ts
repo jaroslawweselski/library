@@ -25,4 +25,8 @@ export class ClientListComponent implements OnInit {
         this.clientService.clientSelected.emit(client);
     }
 
+    onRemove(index: number) {
+        this.clientService.removeClient(index);
+    }
+
 }
