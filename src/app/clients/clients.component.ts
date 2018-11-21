@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Client} from './client.model';
+import {ClientService} from './client.service';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+    selector: 'app-clients',
+    templateUrl: './clients.component.html',
+    styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
+    @Input() action: string;
+    clientSelected: Client;
 
-  constructor() { }
+    constructor(private clientService: ClientService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    setAction(action: string) {
+        this.action = action;
+    }
 
 }

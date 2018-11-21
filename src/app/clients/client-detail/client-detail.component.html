@@ -1,2 +1,12 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
+<div *ngIf="client">
+    <hr>
+    <p class="lead">
+        <strong>Name:</strong> Firstname Lastname<br>
+        <strong>Address:</strong> Address<br>
+        <strong>Zipcode:</strong> Zipcode<br>
+        <strong>City:</strong> {{ client.city }}<br>
+        <strong>Phone Number:</strong> Phone Number
+    </p>
+</div>

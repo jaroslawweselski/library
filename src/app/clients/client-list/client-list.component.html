@@ -19,8 +19,8 @@
                 <div class="btn-group">
                     <button class="btn btn-outline-success btn-sm dropdown-toggle" appDropdown>Manage</button>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Show details</a>
-                        <a href="#" class="dropdown-item">Edit</a>
+                        <a href="javascript:void(0);" class="dropdown-item" (click)="onClientSelected('detail')">Show details</a>
+                        <a href="javascript:void(0);" class="dropdown-item" (click)="onClientSelected('edit')">Edit</a>
                         <a href="#" class="dropdown-item">Remove</a>
                     </div>
                 </div>
