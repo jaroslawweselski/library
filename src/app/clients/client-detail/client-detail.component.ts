@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Client} from '../client.model';
 
 @Component({
     selector: 'app-client-detail',
@@ -8,6 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class ClientDetailComponent implements OnInit {
     title: string = 'Client Detail';
     description: string = 'This section allows you to preview specific client.';
+    @Input() client: Client;
 
     constructor() {
     }

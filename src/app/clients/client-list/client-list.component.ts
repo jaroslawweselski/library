@@ -20,8 +20,9 @@ export class ClientListComponent implements OnInit {
         this.clients = this.clientService.getClients();
     }
 
-    onClientSelected(action: string) {
+    onClientSelected(client: Client, action: string) {
         this.action.emit(action);
+        this.clientService.clientSelected.emit(client);
     }
 
 }

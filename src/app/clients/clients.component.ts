@@ -15,6 +15,12 @@ export class ClientsComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.clientService.clientSelected
+            .subscribe(
+                (client: Client) => {
+                    this.clientSelected = client;
+                }
+            );
     }
 
     setAction(action: string) {

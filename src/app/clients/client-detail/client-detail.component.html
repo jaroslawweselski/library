@@ -3,10 +3,10 @@
 <div *ngIf="client">
     <hr>
     <p class="lead">
-        <strong>Name:</strong> Firstname Lastname<br>
-        <strong>Address:</strong> Address<br>
-        <strong>Zipcode:</strong> Zipcode<br>
+        <strong>Name:</strong> {{ client.firstName }} {{ client.lastName }}<br>
+        <strong>Address:</strong> {{ client.address }}<br>
+        <strong>Zipcode:</strong> {{ client.zipCode }}<br>
         <strong>City:</strong> {{ client.city }}<br>
-        <strong>Phone Number:</strong> Phone Number
+        <strong>Phone Number:</strong> {{ client.phoneNumber }}
     </p>
 </div>

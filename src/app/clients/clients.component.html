@@ -3,7 +3,7 @@
         <app-client-list (action)="setAction($event)"></app-client-list>
     </div>
     <div class="col-sm" *ngIf="action === 'detail' || !action">
-        <app-client-detail></app-client-detail>
+        <app-client-detail [client]="clientSelected"></app-client-detail>
     </div>
     <div class="col-sm" *ngIf="action === 'edit'">
         <app-client-edit></app-client-edit>
