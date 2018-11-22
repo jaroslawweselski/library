@@ -1,7 +1,7 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
 
-<table class="table">
+<table class="table" *ngIf="books.length > 0; else noBooks">
     <thead class="thead-dark">
     <tr>
         <th scope="col">#</th>
@@ -23,10 +23,15 @@
                 <div class="dropdown-menu">
                     <a href="javascript:void(0);" class="dropdown-item" (click)="onBookSelect(book, 'detail')">Show details</a>
                     <a href="javascript:void(0);" class="dropdown-item" (click)="onBookSelect(book, 'edit')">Edit</a>
-                    <a href="javascript:void(0);" class="dropdown-item">Remove</a>
+                    <a href="javascript:void(0);" class="dropdown-item" (click)="onBookRemove(i)">Remove</a>
                 </div>
             </div>
         </td>
     </tr>
     </tbody>
 </table>
+
+<ng-template #noBooks>
+    <hr>
+    <p class="lead">There are no books yet.</p>
+</ng-template>

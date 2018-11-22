@@ -21,7 +21,7 @@
                     <div class="dropdown-menu">
                         <a href="javascript:void(0);" class="dropdown-item" (click)="onClientSelected(client, 'detail')">Show details</a>
                         <a href="javascript:void(0);" class="dropdown-item" (click)="onClientSelected(client, 'edit')">Edit</a>
-                        <a href="javascript:void(0);" class="dropdown-item" (click)="onRemove(i)">Remove</a>
+                        <a href="javascript:void(0);" class="dropdown-item" (click)="onClientRemove(i)">Remove</a>
                     </div>
                 </div>
             </td>
@@ -31,5 +31,5 @@
 
 <ng-template #noClients>
     <hr>
-    <p class="lead">There is no clients yet.</p>
+    <p class="lead">There are no clients yet.</p>
 </ng-template>
