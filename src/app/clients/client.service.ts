@@ -32,4 +32,17 @@ export class ClientService {
     removeClient(index: number) {
         this.clients.splice(index, 1);
     }
+
+    editClient(client: Client) {
+        let foundClient: Client = this.findById(client.id);
+        foundClient = client;
+    }
+
+    findById(id: number) {
+        for (const client of this.clients) {
+            if (client.id === id) {
+                return client;
+            }
+        }
+    }
 }

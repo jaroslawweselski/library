@@ -19,6 +19,7 @@ import {ClientEditComponent} from './clients/client-edit/client-edit.component';
 import {ClientService} from './clients/client.service';
 import {BookService} from './books/book.service';
 import {DropdownDirective} from './shared/dropdown.directive';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes = [
     {
@@ -55,7 +56,8 @@ const appRoutes = [
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        FormsModule
     ],
     providers: [
         ClientService,

@@ -1,2 +1,30 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
+
+<form (ngSubmit)="onClientSubmit()">
+    <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="First name" name="firstName" [(ngModel)]="client.firstName">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Last name" name="lastName" [(ngModel)]="client.lastName">
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Address" name="address" [(ngModel)]="client.address"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="zipCode">Last name</label>
+        <input type="text" class="form-control" id="zipCode" aria-describedby="zipCode" placeholder="Zipcode" name="zipCode" [(ngModel)]="client.zipCode">
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" aria-describedby="city" placeholder="City" name="city" [(ngModel)]="client.city">
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Phone number</label>
+        <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneNumber" placeholder="Phone number" name="phoneNumber" [(ngModel)]="client.phoneNumber">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="redirect()">Submit</button>
+</form>
