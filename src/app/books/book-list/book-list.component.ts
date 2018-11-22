@@ -20,8 +20,8 @@ export class BookListComponent implements OnInit {
   }
 
   onBookSelect(book: Book, action: string) {
-    this.bookService.bookSelected.emit(book);
     this.action.emit(action);
+    this.bookService.bookSelected.emit(book);
   }
 
   onBookRemove(index: number) {

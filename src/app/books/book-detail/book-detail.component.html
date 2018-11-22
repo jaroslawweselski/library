@@ -1,2 +1,13 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
+
+<div *ngIf="book">
+    <hr>
+    <p class="lead">
+        <strong>Title:</strong> {{ book.title }} <br>
+        <strong>Author:</strong> {{ book.author }}<br>
+        <strong>Description:</strong> {{ book.description }}<br>
+        <strong>Release Date:</strong> {{ book.relaseDate }}<br>
+        <strong>Quantity:</strong> {{ book.quantity }}
+    </p>
+</div>
