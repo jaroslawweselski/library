@@ -28,4 +28,8 @@ export class BookListComponent implements OnInit {
     this.bookService.removeBook(index);
   }
 
+  onBookAdd(action: string) {
+    this.action.emit(action);
+  }
+
 }

@@ -38,7 +38,11 @@ export class ClientService {
         foundClient = client;
     }
 
-    findById(id: number) {
+    addClient(client: Client) {
+        this.clients.push(client);
+    }
+
+    private findById(id: number) {
         for (const client of this.clients) {
             if (client.id === id) {
                 return client;

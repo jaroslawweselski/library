@@ -8,4 +8,7 @@
     <div class="col-sm" *ngIf="action === 'edit'">
         <app-book-edit [book]="bookSelected" (action)="setAction($event)"></app-book-edit>
     </div>
+    <div class="col-sm" *ngIf="action === 'add'">
+        <app-book-add (action)="setAction($event)"></app-book-add>
+    </div>
 </div>

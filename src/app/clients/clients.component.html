@@ -8,5 +8,8 @@
     <div class="col-sm" *ngIf="action === 'edit'">
         <app-client-edit [client]="clientSelected" (action)="setAction($event)"></app-client-edit>
     </div>
+    <div class="col-sm" *ngIf="action === 'add'">
+        <app-client-add (action)="setAction($event)"></app-client-add>
+    </div>
 
 </div>

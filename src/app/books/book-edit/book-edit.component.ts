@@ -22,9 +22,6 @@ export class BookEditComponent implements OnInit {
 
     onBookSubmit() {
         this.bookService.editBook(this.book);
-    }
-
-    redirect() {
         this.action.emit('detail');
     }
 }

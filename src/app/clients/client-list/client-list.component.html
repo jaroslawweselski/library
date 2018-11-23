@@ -1,5 +1,7 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
+<a href="javascript:void(0);" class="btn btn-outline-success" (click)="onClientAdd('add')">Add</a>
+<hr>
 
 <table class="table" *ngIf="clients.length > 0; else noClients">
     <thead class="thead-dark">
@@ -30,6 +32,5 @@
 </table>
 
 <ng-template #noClients>
-    <hr>
     <p class="lead">There are no clients yet.</p>
 </ng-template>

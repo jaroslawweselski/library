@@ -1,5 +1,6 @@
 import {Book} from './book.model';
 import {EventEmitter, Output} from '@angular/core';
+import {Client} from '../clients/client.model';
 
 export class BookService {
     @Output() bookSelected = new EventEmitter<Book>();
@@ -36,6 +37,10 @@ export class BookService {
     editBook(book: Book) {
         let foundBook: Book = this.findById(book.id);
         foundBook = book;
+    }
+
+    addBook(book: Book) {
+        this.books.push(book);
     }
 
     findById(id: number) {

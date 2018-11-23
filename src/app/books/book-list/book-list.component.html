@@ -1,5 +1,7 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
+<a href="javascript:void(0);" class="btn btn-outline-success" (click)="onBookAdd('add')">Add</a>
+<hr>
 
 <table class="table" *ngIf="books.length > 0; else noBooks">
     <thead class="thead-dark">
@@ -32,6 +34,5 @@
 </table>
 
 <ng-template #noBooks>
-    <hr>
     <p class="lead">There are no books yet.</p>
 </ng-template>

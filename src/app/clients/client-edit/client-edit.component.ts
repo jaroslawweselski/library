@@ -20,9 +20,6 @@ export class ClientEditComponent implements OnInit {
 
   onClientSubmit() {
     this.clientService.editClient(this.client);
-  }
-
-  redirect() {
     this.action.emit('detail');
   }
 

@@ -21,12 +21,20 @@ export class ClientListComponent implements OnInit {
     }
 
     onClientSelected(client: Client, action: string) {
-        this.action.emit(action);
+        this.actionEmit(action);
         this.clientService.clientSelected.emit(client);
     }
 
     onClientRemove(index: number) {
         this.clientService.removeClient(index);
+    }
+
+    onClientAdd(action: string) {
+        this.actionEmit(action);
+    }
+
+    private actionEmit(action: string) {
+        this.action.emit(action);
     }
 
 }

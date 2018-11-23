@@ -1,7 +1,7 @@
 <h1 class="mt-5">{{ title }}</h1>
 <p class="lead">{{ description }}</p>
 
-<form>
+<form (ngSubmit)="onBookSubmit()">
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title" name="title" [(ngModel)]="book.title">
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         <label for="title">Quantity</label>
-        <input type="number" class="form-control" id="quantity" aria-describedby="quantity" placeholder="quantity" name="quantity" [(ngModel)]="book.quantity">
+        <input type="number" class="form-control" id="quantity" aria-describedby="quantity" placeholder="Quantity" name="quantity" [(ngModel)]="book.quantity">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="redirect()">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
